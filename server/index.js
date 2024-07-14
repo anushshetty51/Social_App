@@ -17,6 +17,10 @@ app.use(cors());
 app.use('/posts', postRoutes);
 app.use('/user',userRoutes);
 
+app.get('/',(req,res)=>{
+    res.send('APP is running')
+})
+
 // MongoDB connection setup
 // const CONNECTION_URL = 'mongodb+srv://anushshetty:anushshetty123@cluster0.a0eyskz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 const PORT = process.env.PORT || 5000;
